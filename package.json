@@ -1,16 +1,17 @@
 {
   "name": "optimize-ui-event",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Helper that optimizes UI event by throttling them using requestAnimationFrame",
   "main": "dist/index.min.js",
   "odule": "dist/index.min.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p --config ./webpack.config.js",
-    "build:dev": "cross-env NODE_ENV=production webpack --config ./webpack.config.js"
+    "build:dev": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/notgiorgi/optimize-ui-event.git"
+    "url": "https://github.com/notgiorgi/optimize-ui-event.git"
   },
   "keywords": [
     "UI",
@@ -35,6 +36,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "webpack": "^3.4.1"
+    "webpack": "^3.4.1",
+    "semantic-release": "^6.3.6"
   }
 }

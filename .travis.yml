@@ -1,8 +1,17 @@
 sudo: false
 language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
 node_js:
   - "6"
-install: npm install
+before_script:
+  - npm prune
 script: npm build
 after_success:
-  - semantic-release pre && npm publish && semantic-release post
+  - npm run semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
