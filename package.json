@@ -2,8 +2,8 @@
   "name": "optimize-ui-event",
   "version": "0.0.0-development",
   "description": "Helper that optimizes UI event by throttling them using requestAnimationFrame",
-  "main": "dist/index.min.js",
-  "odule": "dist/index.min.js",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.umd.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p --config ./webpack.config.js",
     "build:dev": "cross-env NODE_ENV=production webpack --config ./webpack.config.js",
