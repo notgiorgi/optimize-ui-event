@@ -1,12 +1,12 @@
-module.exports =  function optimizeEvent(type, obj = window) {
+module.exports = function optimizeEvent(type, obj = window) {
     let running = false
 
     obj.addEventListener(type, () => {
-        if (running) { return; }
-        running = true;
+        if (running) return
+        running = true
         requestAnimationFrame(() => {
             obj.dispatchEvent(new CustomEvent(`optimized-${type}`))
-            running = false;
+            running = false
         })
     })
 }
